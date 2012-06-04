@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="35dip"
+        android:text="Roboroach Configuration"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:text="Select the stimulation type and parameters below"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RadioButton
+        android:id="@+id/rr_pulse_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="5dip"
+        android:text="Pulse Stimulation"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/rr_sti_amp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_pulse_button"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="Stimulation Amp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rr_pulse_width"
+        android:layout_alignRight="@+id/rr_status_message"
+        android:layout_below="@+id/rr_pulse_button"
+        android:textSize="12dp"
+        android:layout_toRightOf="@+id/rr_sti_time"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rr_sti_amp"
+        android:layout_alignBottom="@+id/rr_sti_amp"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="V"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/rr_pulse_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_sti_amp"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="Pulse Width"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/EditText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rr_pulse_freq"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/rr_pulse_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_pulse_width"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="Pulse Freq"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/EditText02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rr_pulse_count"
+        android:layout_alignLeft="@+id/EditText01"
+        android:layout_alignRight="@+id/EditText01"
+        android:layout_below="@+id/rr_pulse_width"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/rr_pulse_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_pulse_freq"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="Pulse Count"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/EditText03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rr_random_button"
+        android:layout_alignLeft="@+id/EditText02"
+        android:layout_alignRight="@+id/EditText02"
+        android:layout_below="@+id/EditText02"
+        android:ems="10" />
+
+    <RadioButton
+        android:id="@+id/rr_random_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_pulse_count"
+        android:layout_marginLeft="5dip"
+        android:text="Random Stimulation"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/rr_sti_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_random_button"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="Time of Stimulation"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/EditText04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rr_status_message"
+        android:layout_alignRight="@+id/rr_status_message"
+        android:layout_below="@+id/rr_random_button"
+        android:layout_toRightOf="@+id/rr_pulse_button"
+        android:ems="10" />
+
+    <RadioButton
+        android:id="@+id/rr_status_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_sti_time"
+        android:layout_marginLeft="5dip"
+        android:text="Enable Status Messages"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/rr_cancel_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rr_status_message"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/rr_save_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_status_message"
+        android:layout_toRightOf="@+id/rr_cancel_button"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/rr_help_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_status_message"
+        android:layout_toRightOf="@+id/rr_save_button"
+        android:text="Help" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rr_sti_amp"
+        android:layout_alignBottom="@+id/rr_sti_amp"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="V"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rr_pulse_width"
+        android:layout_alignBottom="@+id/rr_pulse_width"
+        android:layout_alignLeft="@+id/TextView01"
+        android:text="S"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rr_pulse_freq"
+        android:layout_alignBottom="@+id/rr_pulse_freq"
+        android:layout_alignLeft="@+id/TextView02"
+        android:text="Hz"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rr_sti_time"
+        android:layout_alignBottom="@+id/rr_sti_time"
+        android:layout_alignLeft="@+id/TextView03"
+        android:text="S"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

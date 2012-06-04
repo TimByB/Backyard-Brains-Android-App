@@ -88,6 +88,10 @@ public class BackyardAndroidActivity extends Activity {
 			Intent config = new Intent(this, BackyardBrainsConfigurationActivity.class);
 			startActivity(config);
 			return true;
+		case R.id.roboroach:
+			Intent roach = new Intent(this, RoboroachActivity.class);
+			startActivity(roach);
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}

@@ -21,6 +21,13 @@
 			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
 		<activity android:name=".BackyardBrainsConfigurationActivity"
 			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+		<activity android:name=".RoboroachActivity"
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+		<activity android:name=".RoboroachHelpActivity"
+			android:theme="@android:style/Theme.Dialog">
+		</activity>
+		<activity android:name=".RoboroachConfigActivity"
+		    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
 		<service android:name="com.backyardbrains.audio.AudioService"></service>
 	</application>
 </manifest>

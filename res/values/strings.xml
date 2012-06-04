@@ -19,4 +19,5 @@
     <!--  Key Names used in software -->
     <string name="global_prefs">BackyardBrainsGlobalPreferences</string>
     <string name="microphone_read_speed">MicrophoneReadSpeed</string>
+    <string name="roboroach">Roboroach</string>
 </resources>
