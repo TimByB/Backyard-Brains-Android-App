@@ -24,15 +24,17 @@
         android:layout_marginTop="10dip"
         android:text="Select the stimulation type and parameters below"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <RadioButton
+  
+    <CheckBox
         android:id="@+id/rr_pulse_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView2"
         android:layout_marginLeft="5dip"
         android:text="Pulse Stimulation"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:onClick="onCheckboxClicked"
+        android:checked="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"  />
 
     <TextView
         android:id="@+id/rr_sti_amp"
@@ -46,7 +48,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/rr_sti_amp_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rr_pulse_width"
@@ -54,6 +56,8 @@
         android:layout_below="@+id/rr_pulse_button"
         android:textSize="12dp"
         android:layout_toRightOf="@+id/rr_sti_time"
+        android:digits="0123456780."
+		android:inputType="numberDecimal"
         android:ems="10" >
 
         <requestFocus />
@@ -66,7 +70,7 @@
         android:layout_alignBaseline="@+id/rr_sti_amp"
         android:layout_alignBottom="@+id/rr_sti_amp"
         android:layout_marginLeft="5dip"
-        android:layout_toRightOf="@+id/editText1"
+        android:layout_toRightOf="@+id/rr_sti_amp_input"
         android:text="V"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -82,13 +86,15 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/EditText01"
+        android:id="@+id/rr_pulse_width_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rr_pulse_freq"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/rr_sti_amp_input"
+        android:layout_alignRight="@+id/rr_sti_amp_input"
+        android:layout_below="@+id/rr_sti_amp_input"
+        android:digits="0123456780."
+		android:inputType="numberDecimal"
         android:ems="10" />
 
     <TextView
@@ -103,13 +109,15 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/EditText02"
+        android:id="@+id/rr_pulse_freq_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rr_pulse_count"
-        android:layout_alignLeft="@+id/EditText01"
-        android:layout_alignRight="@+id/EditText01"
+        android:layout_alignLeft="@+id/rr_pulse_width_input"
+        android:layout_alignRight="@+id/rr_pulse_width_input"
         android:layout_below="@+id/rr_pulse_width"
+        android:digits="0123456780."
+		android:inputType="numberDecimal"
         android:ems="10" />
 
     <TextView
@@ -122,24 +130,28 @@
         android:layout_marginTop="10dip"
         android:text="Pulse Count"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
+
     <EditText
-        android:id="@+id/EditText03"
+        android:id="@+id/rr_pulse_count_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rr_random_button"
-        android:layout_alignLeft="@+id/EditText02"
-        android:layout_alignRight="@+id/EditText02"
-        android:layout_below="@+id/EditText02"
+        android:layout_alignLeft="@+id/rr_pulse_freq_input"
+        android:layout_alignRight="@+id/rr_pulse_freq_input"
+        android:layout_below="@+id/rr_pulse_freq_input"
+		android:digits="0123456780."
+		android:inputType="numberDecimal"        
         android:ems="10" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/rr_random_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rr_pulse_count"
         android:layout_marginLeft="5dip"
         android:text="Random Stimulation"
+        android:onClick="onCheckboxClicked"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -154,16 +166,18 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/EditText04"
+        android:id="@+id/rr_sti_time_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rr_status_message"
         android:layout_alignRight="@+id/rr_status_message"
         android:layout_below="@+id/rr_random_button"
         android:layout_toRightOf="@+id/rr_pulse_button"
+		android:digits="0123456780."
+		android:inputType="numberDecimal"        
         android:ems="10" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/rr_status_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -188,6 +202,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rr_status_message"
         android:layout_toRightOf="@+id/rr_cancel_button"
+        android:onClick="onSave"
         android:text="Save" />
 
     <Button
@@ -206,7 +221,7 @@
         android:layout_alignBaseline="@+id/rr_sti_amp"
         android:layout_alignBottom="@+id/rr_sti_amp"
         android:layout_marginLeft="5dip"
-        android:layout_toRightOf="@+id/editText1"
+        android:layout_toRightOf="@+id/rr_sti_amp_input"
         android:text="V"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -239,5 +254,7 @@
         android:layout_alignLeft="@+id/TextView03"
         android:text="S"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
 
 </RelativeLayout>
